@@ -2,5 +2,27 @@
   "name": "monty-hall",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Drew Wyatt <drew.j.wyatt@gmail.com>"
+  "author": "Drew Wyatt <drew.j.wyatt@gmail.com>",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc",
+    "postinstall": "yarn build"
+  },
+  "dependencies": {
+    "listr": "^0.14.3",
+    "ramda": "^0.27.0",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "@types/listr": "^0.14.2",
+    "@types/node": "^13.7.0",
+    "@types/ramda": "^0.26.41",
+    "@types/yargs": "^15.0.3",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
 }
